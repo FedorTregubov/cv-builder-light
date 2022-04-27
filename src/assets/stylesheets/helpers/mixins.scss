@@ -1,0 +1,11 @@
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: ($size / 16px) * 1rem;
+}
+
+@mixin flex($justifyContent: flex-start, $alignItems: center, $direction: row) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+}

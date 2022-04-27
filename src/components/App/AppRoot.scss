@@ -1,0 +1,14 @@
+@import "../../assets/stylesheets/main";
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 1.6cm 1cm 1.6cm 1.6cm;
+    // See: https://stackoverflow.com/questions/6670151/how-can-i-force-browsers-to-print-background-images-in-css
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+    color-adjust: exact !important;
+  }
+}
