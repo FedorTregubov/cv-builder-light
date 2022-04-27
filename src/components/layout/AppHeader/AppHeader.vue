@@ -6,6 +6,7 @@
 
         <button
           class="inline-flex items-center h-8 px-5 rounded-full outline-none bg-sky-300 font-semibold text-white"
+          data-test="app-header__button-print"
           @click.prevent="onPrint"
         >
           <IconPrint class="w-4 h-4 mr-2 fill-white" />

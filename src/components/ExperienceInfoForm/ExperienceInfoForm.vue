@@ -7,7 +7,7 @@
     John Smith
   </AppTitle>
 
-  <!--name-->
+  <!--about-->
   <AppTitle
     :size="AppTitleSizes.sm"
     is-editable

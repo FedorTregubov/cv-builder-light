@@ -1,16 +1,17 @@
 import { defineComponent } from 'vue';
 import IconPrint from '@/components/shared/icons/IconPrint.vue';
+import { AppHeaderEvents } from "./AppHeader.model";
 
 export default defineComponent({
   name: 'AppHeader',
 
   components: { IconPrint },
 
-  emits: ['print'],
+  emits: Object.values(AppHeaderEvents),
 
   setup(_, { emit }) {
     const onPrint = (): void => {
-      emit('print');
+      emit(AppHeaderEvents.print);
     };
 
     return {

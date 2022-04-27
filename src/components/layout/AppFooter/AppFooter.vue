@@ -4,7 +4,8 @@
       <div class="py-5 text-center">
         <a
           class="text-sky-300"
-          href="https://github.com/FedorTregubov/cv-builder-light"
+          data-test="app-footer__link"
+          :href="APP_GITHUB_LINK"
           title="Github project link"
           target="_blank"
           rel="noopener"
@@ -15,3 +16,4 @@
     </div>
   </footer>
 </template>
+<script lang="ts" src="./AppFooter.ts"></script>

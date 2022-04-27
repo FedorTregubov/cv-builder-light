@@ -15,7 +15,8 @@ git checkout -b main
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:FedorTregubov/cv-builder-light.git main:gh-pages
-
+git subtree push --prefix dist origin gh-pages
 # return to the previous directory
 cd -
+
+git checkout master
