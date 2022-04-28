@@ -1,4 +1,4 @@
-import { defineComponent, h } from "vue";
+import { defineComponent, h } from 'vue';
 import { AppTitleSizes } from './types';
 
 export default defineComponent({

@@ -1,5 +1,5 @@
-import { defineComponent } from "vue";
-import { APP_GITHUB_LINK } from "@/data/constants";
+import { defineComponent } from 'vue';
+import { APP_GITHUB_LINK } from '@/data/constants';
 
 export default defineComponent({
   name: 'AppFooter',

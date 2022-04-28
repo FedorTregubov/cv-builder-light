@@ -1,8 +1,8 @@
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 import AppHeader from '@/components/layout/AppHeader/AppHeader.vue';
 import AppFooter from '@/components/layout/AppFooter/AppFooter.vue';
-import ContactInfoForm from "@/components/ContactInfoForm/ContactInfoForm.vue";
-import ExperienceInfoForm from "@/components/ExperienceInfoForm/ExperienceInfoForm.vue";
+import ContactInfoForm from '@/components/ContactInfoForm/ContactInfoForm.vue';
+import ExperienceInfoForm from '@/components/ExperienceInfoForm/ExperienceInfoForm.vue';
 
 export default defineComponent({
   name: 'AppRoot',
