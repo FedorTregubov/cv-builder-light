@@ -1,10 +1,10 @@
 <template>
-  <!--name-->
+  <!--full-name-->
   <AppTitle
     :size="AppTitleSizes.lg"
     is-editable
   >
-    John Smith
+    {{ cvInit.fullName }}
   </AppTitle>
 
   <!--about-->
@@ -13,7 +13,7 @@
     is-editable
     is-secondary
   >
-    Experienced software engineer who constantly seeks out innovative solutions to everyday problems.
+    {{ cvInit.about }}
   </AppTitle>
 
   <!--relevant-experience-->
@@ -25,7 +25,7 @@
     is-editable
     is-secondary
   >
-    Jan 2021 - Mar 2022 Frontend developer at "Awesome Candy Shop".
+    {{ cvInit.relevantExperience }}
   </AppTitle>
 
   <!--education-->
@@ -37,7 +37,7 @@
     is-editable
     is-secondary
   >
-    2014-2018 Brno University of Technology - BS Electrical Engineering.
+    {{ cvInit.education }}
   </AppTitle>
 
   <!--skills-->
@@ -56,8 +56,7 @@
       class="grow-1 shrink-0 md:basis-1/3 print:basis-1/3"
     >
       <AppRange
-        :title="'Vue'"
-        :value="90"
+        v-bind="{ ...cvInit.skills[0] }"
       />
     </div>
   </div>

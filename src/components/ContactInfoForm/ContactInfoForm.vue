@@ -4,7 +4,7 @@
   <div class="mt-4">
     <!--position-->
     <AppTitle is-editable>
-      Software Engineer
+      {{ cvInit.position }}
     </AppTitle>
 
     <!--location-->
@@ -13,7 +13,7 @@
       is-editable
       is-secondary
     >
-      Hannover, Germany
+      {{ cvInit.location }}
     </AppTitle>
   </div>
 
@@ -24,7 +24,7 @@
       is-editable
       is-secondary
     >
-      john.smith@gmail.com
+      {{ cvInit.email }}
     </AppTitle>
 
     <!--phone-->
@@ -33,7 +33,7 @@
       is-editable
       is-secondary
     >
-      +49 000 000 00 00
+      {{ cvInit.phone }}
     </AppTitle>
   </div>
 </template>

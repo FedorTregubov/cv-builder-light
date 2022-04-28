@@ -1,6 +1,7 @@
 import { defineComponent } from "vue";
 import AppAvatar from "@/components/shared/AppAvatar/AppAvatar.vue";
 import { AppTitle, AppTitleSizes } from "@/components/shared/AppTitle";
+import { cvInit }  from '@/data/mocks/cv.mock.data';
 
 export default defineComponent({
   name: 'ContactInfoForm',
@@ -12,7 +13,8 @@ export default defineComponent({
 
   setup() {
     return {
-      AppTitleSizes
+      AppTitleSizes,
+      cvInit: cvInit.contactInfo,
     };
   },
 });

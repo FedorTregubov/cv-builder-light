@@ -12,7 +12,7 @@ export const cvInit = {
     education: '2014-2018 Brno University of Technology - BS Electrical Engineering.',
     skills: [
       {
-        name: 'Vue',
+        title: 'Vue',
         value: 90,
       },
     ],

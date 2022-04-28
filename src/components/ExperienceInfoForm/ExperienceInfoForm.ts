@@ -1,6 +1,7 @@
 import { defineComponent, ref } from "vue";
 import { AppTitle, AppTitleSizes } from "@/components/shared/AppTitle";
 import AppRange from '@/components/shared/AppRange/AppRange.vue';
+import { cvInit } from '@/data/mocks/cv.mock.data';
 
 export default defineComponent({
   name: 'ExperienceInfoForm',
@@ -20,6 +21,7 @@ export default defineComponent({
       AppTitleSizes,
       skillsCounter,
       onAddSkill,
+      cvInit: cvInit.experienceInfo,
     };
   },
 })
