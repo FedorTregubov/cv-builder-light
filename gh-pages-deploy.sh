@@ -18,4 +18,4 @@ npm run build
 git checkout gh-pages
 git add dist -f
 git commit -m 'deploy' # TODO: add release number here
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist origin gh-pages --force
