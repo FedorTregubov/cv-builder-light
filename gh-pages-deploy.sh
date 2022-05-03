@@ -19,5 +19,5 @@ npm run build
 # init subtree and push gh-pages-branch
 git checkout gh-pages
 git add dist -f
-git commit -m 'deploy' # TODO: add release number here
+git commit --no-verify -m 'deploy' # TODO: add release number here
 git push origin `git subtree split --prefix dist master`:gh-pages --force
