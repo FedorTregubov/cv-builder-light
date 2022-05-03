@@ -5,6 +5,8 @@ set -e
 
 # lint
 npm run lint
+
+# type-check
 npm run typecheck
 
 # test
