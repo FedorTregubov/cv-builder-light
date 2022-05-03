@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="py-5 text-center">
         <a
-          class="text-sky-300"
+          class="text-sky-300 outline-none"
           data-test="app-footer__link"
           :href="APP_GITHUB_LINK"
           title="Github project link"
