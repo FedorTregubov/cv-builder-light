@@ -1,6 +1,6 @@
 <template>
   <div class="app-range py-2">
-    <div class="flex items-center w-full text-gray-400">
+    <div class="flex items-center w-full pr-5 text-gray-400">
       <AppTitle
         :size="AppTitleSizes.sm"
         is-editable

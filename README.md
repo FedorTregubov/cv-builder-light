@@ -29,7 +29,7 @@ npm run test:unit
 ```
 
 #### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
+_Comming soon..._
 ```sh
 npm run build
 npm run test:e2e # or `npm run test:e2e:ci` for headless testing
@@ -41,4 +41,11 @@ Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
+```
+
+## Deploy
+
+I use github-pages, so to deploy you need to run:
+```sh
+sh ./gh-pages-deploy.sh
 ```

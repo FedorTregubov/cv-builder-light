@@ -47,13 +47,14 @@ export default defineComponent({
       }, { default: slots.default })
     };
 
+    const btnClassName = 'inline-flex items-center px-2 text-center font-semibold text-sky-300 outline-none print:hidden';
     const renderButtonAdd = () => h('button', {
-      class: 'inline-flex items-center px-2 text-center font-semibold text-sky-300 print:hidden',
+      class: btnClassName,
       onClick: () => emit('add'),
     }, '+');
 
     const renderButtonRm = () => h('button', {
-      class: 'inline-flex items-center px-2 text-center font-semibold text-red-500 print:hidden'
+      class: btnClassName,
     }, '-');
 
     return () => h('div', {

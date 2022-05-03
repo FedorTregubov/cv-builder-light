@@ -51,12 +51,21 @@
 
   <div class="md:flex md:flex-wrap md:items-start">
     <div
-      v-for="index in skillsCounter"
-      :key="`skill-${index}`"
-      class="grow-1 shrink-0 md:basis-1/3 print:basis-1/3"
+      v-for="skill in skills"
+      :key="`skill-${skill.id}`"
+      :ref="setSkillRef"
+      class="relative grow-1 shrink-0 md:basis-1/3 print:basis-1/3"
     >
+      <button
+        v-show="isSkillRmBtnAvailable"
+        class="absolute right-0 top-4 inline-flex items-center px-2 text-center font-semibold text-sky-300 outline-none print:hidden"
+        :disabled="!isSkillRmBtnAvailable"
+        @click.prevent="onRmSkill(skill.id)"
+      >
+        <IconTrash class="w-4 h-4 fill-sky-300" />
+      </button>
       <AppRange
-        v-bind="{ ...cvInit.skills[0] }"
+        v-bind="{ ...skill }"
       />
     </div>
   </div>
