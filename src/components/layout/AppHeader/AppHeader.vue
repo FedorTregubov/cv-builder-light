@@ -10,7 +10,7 @@
           @click.prevent="onPrint"
         >
           <IconPrint class="w-4 h-4 mr-2 fill-white" />
-          Print
+          {{ $t('print') }}
         </button>
       </div>
     </div>
