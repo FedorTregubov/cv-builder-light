@@ -1,7 +1,7 @@
 export const cvInit = {
   contactInfo: {
     position: 'Software Engineer',
-    location: 'Hannover, Germany',
+    location: '30159 Hannover, DE',
     email: 'john.smith@gmail.com',
     phone: '+49 000 000 00 00',
   },

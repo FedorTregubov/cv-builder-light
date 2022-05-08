@@ -1,7 +1,7 @@
 # CV-Builder-light
 
 ### About
-Simple stateless CV-builder.
+Simple CV-builder.
 
 Just change all the data and print it or save to PDF.
 

@@ -1,5 +1,5 @@
 <template>
-  <AppAvatar />
+  <AppAvatar :hint="$t('avatarLabel')" />
 
   <div class="mt-4">
     <!--position-->

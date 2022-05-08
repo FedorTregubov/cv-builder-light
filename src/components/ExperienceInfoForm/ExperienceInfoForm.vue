@@ -18,7 +18,7 @@
 
   <!--relevant-experience-->
   <AppTitle class="mt-4">
-    Relevant experience
+    {{ $t('relevantExperienceLabel') }}
   </AppTitle>
   <AppTitle
     :size="AppTitleSizes.sm"
@@ -30,7 +30,7 @@
 
   <!--education-->
   <AppTitle class="mt-4">
-    Education
+    {{ $t('educationLabel') }}
   </AppTitle>
   <AppTitle
     :size="AppTitleSizes.sm"
@@ -46,7 +46,7 @@
     :is-button-add-visible="true"
     @add="onAddSkill"
   >
-    Skills
+    {{ $t('skillsLabel') }}
   </AppTitle>
 
   <div class="md:flex md:flex-wrap md:items-start">

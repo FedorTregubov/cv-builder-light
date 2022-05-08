@@ -1,11 +1,12 @@
 import { defineComponent } from 'vue';
-import IconPrint from '@/components/shared/icons/IconPrint.vue';
 import { AppHeaderEvents } from "./AppHeader.model";
+import IconPrint from '@/components/shared/icons/IconPrint.vue';
+import AppLangSelect from '@/components/shared/AppLangSelect/AppLangSelect.vue';
 
 export default defineComponent({
   name: 'AppHeader',
 
-  components: { IconPrint },
+  components: { IconPrint, AppLangSelect },
 
   emits: Object.values(AppHeaderEvents),
 
