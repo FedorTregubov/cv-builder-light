@@ -9,7 +9,7 @@ export const I18N_DEFAULT_LOCALE = I18N_LOCALES.EN_US;
 document.documentElement.setAttribute('lang', I18N_DEFAULT_LOCALE);
 
 export const i18n = createI18n({
-  locale: I18N_DEFAULT_LOCALE,
+  locale: getUserLang(),
   fallbackLocale: I18N_DEFAULT_LOCALE,
   messages: {
     [I18N_LOCALES.EN_US]: enUS,
@@ -22,4 +22,14 @@ export const i18n = createI18n({
 export function setLanguage (lang: I18N_LOCALES): void {
   i18n.global.locale = lang;
   document.documentElement.setAttribute('lang', lang)
+}
+
+function getUserLang (): string {
+  const candidateLang = navigator.languages
+    ? navigator.languages[0]
+    : navigator.language;
+
+  return Object.keys(I18N_LOCALES).includes(candidateLang)
+    ? candidateLang
+    : I18N_DEFAULT_LOCALE;
 }

@@ -29,18 +29,24 @@ export default defineComponent({
       },
     ];
 
-    const langModel = ref({
+    const langModel = ref<AppLangSelectItem>({
       value: I18N_DEFAULT_LOCALE,
       label: I18N_DEFAULT_LOCALE,
     });
 
-    const onLangChange = (value: AppLangSelectItem): void => {
-      setLanguage(value.value as I18N_LOCALES);
+    const onLangChange = (item: AppLangSelectItem): void => {
+      langModel.value = item;
+      setLanguage(item.value as I18N_LOCALES);
+    };
+
+    const getFlagName = (item: AppLangSelectItem): string => {
+      return String(item.value).split('-').pop()?.toLowerCase() ?? '';
     }
 
     return {
       langModel,
       langItems,
+      getFlagName,
       onLangChange,
     };
   },

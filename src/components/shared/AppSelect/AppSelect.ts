@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import IconArrow from '@/components/shared/icons/IconArrow.vue';
 
 export interface AppLangSelectItem {
@@ -49,6 +49,10 @@ export default defineComponent({
       onListToggle();
     }
 
+    const onClickAway = (): void => {
+      isOpen.value = false;
+    };
+
     return {
       el,
       isOpen,
@@ -56,6 +60,7 @@ export default defineComponent({
       modelValue,
       setModelValue,
       onListToggle,
+      onClickAway,
     };
   },
 });
