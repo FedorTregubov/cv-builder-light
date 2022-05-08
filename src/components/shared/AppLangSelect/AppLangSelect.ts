@@ -10,24 +10,8 @@ export default defineComponent({
   components: { AppSelect },
 
   setup () {
-    const langItems: AppLangSelectItem[] = [
-      {
-        value: I18N_LOCALES.EN_US,
-        label: I18N_LOCALES.EN_US,
-      },
-      {
-        value: I18N_LOCALES.DE_DE,
-        label: I18N_LOCALES.DE_DE,
-      },
-      {
-        value: I18N_LOCALES.RU_RU,
-        label: I18N_LOCALES.RU_RU,
-      },
-      {
-        value: I18N_LOCALES.UA_UA,
-        label: I18N_LOCALES.UA_UA,
-      },
-    ];
+    const langItems: AppLangSelectItem[] = Object.values(I18N_LOCALES)
+      .map((item) => ({ label: item, value: item }));
 
     const langModel = ref<AppLangSelectItem>({
       value: I18N_DEFAULT_LOCALE,
