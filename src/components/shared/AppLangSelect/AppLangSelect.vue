@@ -8,7 +8,7 @@
       <div class="flex items-center">
         <img
           class="mr-2"
-          :src="`/img/flags/${getFlagName(langModel)}.svg`"
+          :src="getFullUrl(`/img/flags/${langModel.value}.svg`)"
           :alt="langModel.label"
           width="24"
           height="24"
@@ -21,7 +21,7 @@
       <div class="flex items-center">
         <img
           class="mr-2"
-          :src="`/img/flags/${getFlagName(item)}.svg`"
+          :src="getFullUrl(`/img/flags/${item.value}.svg`)"
           :alt="item.label"
           width="24"
           height="24"

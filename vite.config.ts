@@ -7,6 +7,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/cv-builder-light/',
+  build: {
+    // See https://github.com/vitejs/vite/issues/7647
+    target: 'es2020',
+  },
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
