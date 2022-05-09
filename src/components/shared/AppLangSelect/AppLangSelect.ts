@@ -3,6 +3,7 @@ import AppSelect from '@/components/shared/AppSelect/AppSelect.vue';
 import { I18N_LOCALES } from '@/models';
 import { I18N_DEFAULT_LOCALE, setLanguage } from '@/use/use18n';
 import type { AppLangSelectItem } from '@/components/shared/AppSelect/AppSelect';
+import { getFullUrl } from '@/utils';
 
 export default defineComponent({
   name: 'AppLangSelect',
@@ -23,14 +24,10 @@ export default defineComponent({
       setLanguage(item.value as I18N_LOCALES);
     };
 
-    const getFlagName = (item: AppLangSelectItem): string => {
-      return String(item.value).split('-').pop()?.toLowerCase() ?? '';
-    }
-
     return {
       langModel,
       langItems,
-      getFlagName,
+      getFullUrl,
       onLangChange,
     };
   },

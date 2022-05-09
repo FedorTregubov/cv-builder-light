@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
 import IconArrow from '@/components/shared/icons/IconArrow.vue';
 
 export interface AppLangSelectItem {
