@@ -3,7 +3,7 @@ import AppSelect from '@/components/shared/AppSelect/AppSelect.vue';
 import { I18N_LOCALES } from '@/models';
 import { I18N_DEFAULT_LOCALE, setLanguage } from '@/use/use18n';
 import type { AppLangSelectItem } from '@/components/shared/AppSelect/AppSelect';
-import { getFullUrl } from '@/utils';
+import { getRootUrl } from '@/utils';
 
 export default defineComponent({
   name: 'AppLangSelect',
@@ -27,7 +27,7 @@ export default defineComponent({
     return {
       langModel,
       langItems,
-      getFullUrl,
+      getRootUrl,
       onLangChange,
     };
   },
