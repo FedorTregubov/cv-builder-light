@@ -1,5 +1,11 @@
-export function getFullUrl (relativeUrl: string): string {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - due to incorrect typing in .vue
-  return new URL(relativeUrl, import.meta.url);
+/**
+ * Returns absolute path to a public asset.
+ * @example
+ * // returns /img/flags/de-DE.svg
+ * getRootUrl(img/flags/de-DE.svg)
+ * @param {string} relativeUrl
+ */
+export function getRootUrl (relativeUrl: string): string {
+  const { VITE_BASE = '/' } = import.meta.env;
+  return `${VITE_BASE}${relativeUrl}`;
 }
